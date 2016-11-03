@@ -1,0 +1,73 @@
+@import "ress/dist/ress.min.css";
+
+body {
+  font-family: "Open Sans";
+  font-weight: 300;
+  background: #fff;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    color: #f33;
+  }
+}
+
+h1 {
+  font-family: Montserrat;
+  font-size: 30px;
+  color: #000;
+  font-weight: 500;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+*:after, *:before {
+  content: '';
+}
+
+:global(#main) {
+  display: flex;
+}
+
+:global(#profile) {
+  margin: 0 auto;
+  color: #999;
+  padding-top: 100px;
+}
+
+.fboxRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  $size: 140px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+  background: no-repeat url(../assets/my-avatar-square.png);
+  background-size: $size;
+}
+
+.email {
+  margin-top: 12px;
+}
+
+.item {
+  margin-top: 20px;
+  .fboxRow {
+    margin-bottom: 8px;
+  }
+}
