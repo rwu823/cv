@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "NODE_ENV=production babel-node ./scripts/build"
+    "build": "NODE_ENV=production babel-node ./scripts/build",
+    "publish": "babel-node ./scripts/publish"
   },
   "keywords": [],
   "author": "Rocky Wu",
@@ -30,6 +31,7 @@
     "node-sass": "^3.13.0",
     "ress": "^1.1.2",
     "sass-loader": "^4.0.2",
+    "shelljs": "^0.7.5",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "vue": "^2.1.4",
