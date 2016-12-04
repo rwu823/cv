@@ -7,10 +7,6 @@
     "dev": "webpack-dev-server --hot --inline",
     "build": "NODE_ENV=production babel-node ./scripts/build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rwu823/resume.git"
-  },
   "keywords": [],
   "author": "Rocky Wu",
   "license": "MIT",
@@ -21,22 +17,22 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
-    "babel-loader": "^6.2.7",
+    "babel-loader": "^6.2.8",
     "babel-plugin-syntax-jsx": "^6.8.0",
-    "babel-plugin-transform-vue-jsx": "^3.1.2",
+    "babel-plugin-transform-vue-jsx": "^3.2.0",
     "babel-polyfill": "^6.9.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-stage-2": "^6.18.0",
-    "css-loader": "^0.25.0",
+    "css-loader": "^0.26.1",
     "del": "^2.2.1",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "html-webpack-plugin": "^2.24.1",
-    "node-sass": "^3.10.1",
-    "ress": "^1.1.1",
+    "node-sass": "^3.13.0",
+    "ress": "^1.1.2",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "vue": "^2.0.3",
+    "vue": "^2.1.4",
     "webpack": "^2.1.0-beta.25",
     "webpack-dev-server": "2.1.0-beta.10"
   },
@@ -48,5 +44,6 @@
     "plugins": [
       "transform-vue-jsx"
     ]
-  }
+  },
+  "repository": "git@github.com:rwu823/cv.git"
 }
