@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+const pkg = require('./package.json')
 const { NODE_ENV } = process.env
 
 const isDev = !NODE_ENV
@@ -56,7 +56,7 @@ module.exports = {
       minChunks: Infinity,
     }),
     new HtmlWebpackPlugin({
-      title: `Rocky Wu's Profile`,
+      title: pkg.description,
       template: './src/index.html',
       minify: {
         collapseWhitespace: true
