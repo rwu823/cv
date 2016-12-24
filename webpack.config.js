@@ -9,11 +9,11 @@ const isProd = (NODE_ENV === 'production')
 
 module.exports = {
   watch: isDev,
-  devtool: isDev ? 'eval' : '',
-  entry: {
-    libs: ['vue'],
-    app: ['./src']
+  devtool: isDev ? 'cheap-eval-source-map' : '',
+  performance: {
+    hints: 'warning',
   },
+  entry: './src',
   output: {
     path: `${__dirname}/gh-pages/`,
     filename: 'static/[name].js',
@@ -23,13 +23,13 @@ module.exports = {
       {
         test: /\.js/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel'
+        loader: 'babel-loader'
       },
 
       {
         test: /\.(png|jpg)$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'url'
+        loader: 'url-loader'
       },
 
       {
@@ -37,24 +37,25 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: isProd ?
           ExtractTextPlugin.extract({
-            fallbackLoader: 'style',
-            loader: 'css?&modules&localIdentName=[hash:base64:7]!sass'
+            fallbackLoader: 'style-loader',
+            loader: 'css-loader?&modules&localIdentName=[hash:base64:7]!sass-loader'
           }) : [
-          'style',
-          'css?sourceMap&modules&localIdentName=[local]--[hash:base64:5]',
-          'sass'
+          'style-loader',
+          'css-loader?sourceMap&modules&localIdentName=[local]--[hash:base64:5]',
+          'sass-loader'
         ].join('!')
       },
 
     ]
   },
 
+  resolve: {
+    alias: {
+
+    }
+  },
+
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'libs',
-      filename: 'static/[name].js',
-      minChunks: Infinity,
-    }),
     new HtmlWebpackPlugin({
       title: pkg.description,
       template: './src/index.html',
