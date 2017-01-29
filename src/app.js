@@ -30,7 +30,7 @@ const App = {
               <a target="_blank" href="//www.npmjs.com/~rwu823">NPM</a>
             </div>
             <div class={[s.fboxRow]}>
-              <a target="_blank" href="//github.com/rwu823/slides">Slides</a>
+              <a target="_blank" href="//drive.google.com/drive/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ">Slides</a>
             </div>
           </div>
         </div>
