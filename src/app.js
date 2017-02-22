@@ -24,7 +24,7 @@ const App = {
               <a target="_blank" href="//github.com/rwu823">Github</a>
             </div>
             <div class={[s.fboxRow]}>
-              <a target="_blank" href="//www.linkedin.com/in/rocky-wu-1091594b">Linkedin</a>
+              <a target="_blank" href="//www.linkedin.com/in/rocky-wu">Linkedin</a>
             </div>
             <div class={[s.fboxRow]}>
               <a target="_blank" href="//www.npmjs.com/~rwu823">NPM</a>
