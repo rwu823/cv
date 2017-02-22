@@ -35,21 +35,5 @@
     "webpack": "2.2.0",
     "webpack-dev-server": "2.2.0"
   },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "browsers": [
-            "last 2 versions",
-            "safari 7"
-          ]
-        }
-      ]
-    ],
-    "plugins": [
-      "transform-vue-jsx"
-    ]
-  },
   "repository": "https://github.com/rwu823/cv.git"
 }
