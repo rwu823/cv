@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - v7
+
+matrix:
+  - MATRIX=build
+
+script:
+  - npm run $MATRIX
+
+after_success:
+  - node scripts/deploy
+
+branches:
+  except:
+    - /^(v?\d+\.\d+\.\d+)/
