@@ -4,10 +4,10 @@ node_js:
   - v7
 
 matrix:
-  - MATRIX=build
+  - TRAVIS_MATRIX=build
 
 script:
-  - npm run $MATRIX
+  - npm run $TRAVIS_MATRIX
 
 after_success:
   - node scripts/deploy
