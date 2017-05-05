@@ -13,7 +13,7 @@ const App = {
             <h1 >Rocky Wu</h1>
           </div>
           <div class={[s.fboxRow, s.email]}>
-            <h3 >rwu823.au@gmail.com</h3>
+            <h3 >Live with JavaScript</h3>
           </div>
 
           <div class={[s.item]}>
