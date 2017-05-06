@@ -43,6 +43,12 @@ h1 {
   padding-top: 140px;
 }
 
+@media (max-width: 700px) {
+  :global(#profile) {
+    padding-top: 20px;
+  }
+}
+
 .fboxRow {
   display: flex;
   align-items: center;
@@ -63,8 +69,9 @@ h1 {
 
 .email {
   margin-top: 8px;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .12em;
+  text-align: center;
 }
 
 .item {
