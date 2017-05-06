@@ -4,7 +4,7 @@ body {
   font-family: "Open Sans";
   font-weight: 300;
   background: #fff;
-  color: #333;
+  color: #777;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,9 +20,10 @@ a {
 
 h1 {
   font-family: Montserrat;
+  letter-spacing: 7px;
   font-size: 30px;
   color: #000;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 *, *:after, *:before {
@@ -39,8 +40,7 @@ h1 {
 
 :global(#profile) {
   margin: 0 auto;
-  color: #999;
-  padding-top: 100px;
+  padding-top: 140px;
 }
 
 .fboxRow {
@@ -62,11 +62,24 @@ h1 {
 }
 
 .email {
-  margin-top: 12px;
+  margin-top: 8px;
+  font-size: 14px;
+  letter-spacing: .12em;
 }
 
 .item {
-  margin-top: 20px;
+  margin-top: 40px;
+  a {
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: #777;
+    text-decoration: none;
+    transition: color .2s ease;
+    line-height: 1.7em;
+    &:hover {
+      color: #f33;
+    }
+  }
   .fboxRow {
     margin-bottom: 8px;
   }
