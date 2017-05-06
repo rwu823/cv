@@ -1,6 +1,6 @@
-import { rm } from 'shelljs'
-import webpack from 'webpack'
-import webpackConf from '../webpack.config'
+const { rm } = require('shelljs')
+const webpack = require('webpack')
+const webpackConf = require('../webpack.config')
 
 rm('-rf', 'gh-pages')
 

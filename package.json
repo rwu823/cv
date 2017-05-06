@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "NODE_ENV=production babel-node ./scripts/build",
-    "publish": "babel-node ./scripts/publish"
+    "build": "NODE_ENV=production node scripts/build",
+    "publish": "node scripts/publish"
   },
   "keywords": [],
   "author": "Rocky Wu",
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/rwu823/resume#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.2",
     "babel-loader": "^7.0.0",
     "babel-plugin-syntax-jsx": "^6.8.0",
