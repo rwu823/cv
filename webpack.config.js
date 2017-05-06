@@ -5,11 +5,11 @@ const pkg = require('./package.json')
 const { NODE_ENV } = process.env
 
 const isDev = !NODE_ENV
-const isProd = (NODE_ENV === 'production')
+const isProd = NODE_ENV === 'production'
 
 module.exports = {
   watch: isDev,
-  devtool: isDev ? 'cheap-eval-source-map' : '',
+  devtool: isDev ? 'cheap-eval-source-map' : false,
   performance: {
     hints: 'warning',
   },
@@ -19,40 +19,41 @@ module.exports = {
     filename: 'static/[name].js',
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader'
+        use: ['babel-loader'],
       },
 
       {
         test: /\.(png|jpg)$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'url-loader'
+        loader: ['url-loader'],
       },
 
       {
         test: /\.scss/,
         exclude: /(node_modules|bower_components)/,
-        loader: isProd ?
-          ExtractTextPlugin.extract({
-            fallbackLoader: 'style-loader',
-            loader: 'css-loader?&modules&localIdentName=[hash:base64:7]!sass-loader'
-          }) : [
-          'style-loader',
-          'css-loader?sourceMap&modules&localIdentName=[local]--[hash:base64:5]',
-          'sass-loader'
-        ].join('!')
+        use: isProd
+          ? ExtractTextPlugin.extract({
+              fallback: ['style-loader'],
+              use: [
+                'css-loader?&modules&localIdentName=[hash:base64:7]',
+                'sass-loader',
+              ],
+            })
+          : [
+              'style-loader',
+              'css-loader?sourceMap&modules&localIdentName=[local]--[hash:base64:5]',
+              'sass-loader',
+            ],
       },
-
-    ]
+    ],
   },
 
   resolve: {
-    alias: {
-
-    }
+    alias: {},
   },
 
   plugins: [
@@ -60,16 +61,18 @@ module.exports = {
       title: pkg.description,
       template: './src/index.html',
       minify: {
-        collapseWhitespace: true
-      }
+        collapseWhitespace: true,
+      },
     }),
-    ...isProd ? [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false
-        }
-      }),
-      new ExtractTextPlugin('static/app.css'),
-    ] : []
-  ]
+    ...(isProd
+      ? [
+          new webpack.optimize.UglifyJsPlugin({
+            compress: {
+              warnings: false,
+            },
+          }),
+          new ExtractTextPlugin('static/app.css'),
+        ]
+      : []),
+  ],
 }
