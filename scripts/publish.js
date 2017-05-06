@@ -1,10 +1,8 @@
-import 'shelljs/global'
-import { version, repository } from '../package.json'
+require('shelljs/global')
+const { version, repository } = require('../package.json')
 
 cd('gh-pages')
 exec('git init')
-exec(`git remote add origin ${repository}`)
 exec('git add .')
 exec(`git commit -anm "v${version}"`)
-exec('git checkout -b gh-pages')
-exec('git push origin gh-pages -f')
+exec(`git push ${repository} master:gh-pages -f`)

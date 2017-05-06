@@ -8,6 +8,7 @@ env:
     - TRAVIS_MATRIX=build
 
 script:
+  - ls -al
   - npm run $TRAVIS_MATRIX
 
 after_success:
