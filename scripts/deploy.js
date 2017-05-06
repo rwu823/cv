@@ -15,6 +15,12 @@ if (TRAVIS_BRANCH === 'master') {
       exec(`git config --global user.email "auto_deploy@travis-ci.org"`)
       exec(`git config --global user.name "TravisCI"`)
 
+      // Add Tag
+      exec(`git tag ${tag}`)
+      exec(`git push ${tokenRepo} ${tag}`, {
+        silent: true,
+      })
+
       // Publish to gh-pages
       cd('gh-pages')
       exec('git init')
