@@ -13,7 +13,7 @@ const App = {
             <h1 >Rocky Wu</h1>
           </div>
           <div class={[s.fboxRow, s.email]}>
-            <h3 >Live with JavaScript</h3>
+            <h3 >Coding, Software & Live with JavaScript</h3>
           </div>
 
           <div class={[s.item]}>
@@ -21,7 +21,7 @@ const App = {
               <a target="_blank" href="//docs.google.com/document/d/1cJcYWFbRaV_cOvcUQl900i3sSLg2AjaBuGj9N219oXI/edit?usp=sharing">Resume</a>
             </div>
             <div class={[s.fboxRow]}>
-              <a target="_blank" href="//github.com/rwu823">Github</a>
+              <a target="_blank" href="//github.com/rwu823">GitHub</a>
             </div>
             <div class={[s.fboxRow]}>
               <a target="_blank" href="//www.linkedin.com/in/rocky-wu">Linkedin</a>
