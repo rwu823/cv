@@ -64,6 +64,7 @@ module.exports = {
         collapseWhitespace: true,
       },
     }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     ...(isProd
       ? [
           new webpack.optimize.UglifyJsPlugin({
