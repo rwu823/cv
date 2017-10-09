@@ -17,9 +17,7 @@ if (TRAVIS_BRANCH === 'master') {
 
       // Add Tag
       exec(`git tag ${tag}`)
-      exec(`git push ${tokenRepo} ${tag}`, {
-        silent: true,
-      })
+      exec(`git push ${tokenRepo} ${tag}`)
 
       // Publish to gh-pages
       cd('out')
