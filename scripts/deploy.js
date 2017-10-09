@@ -22,7 +22,7 @@ if (TRAVIS_BRANCH === 'master') {
       })
 
       // Publish to gh-pages
-      cd('gh-pages')
+      cd('out')
       exec('git init')
       exec('git add .')
       exec(`git commit -anm '${version}'`)
