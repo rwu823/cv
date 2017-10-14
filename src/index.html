@@ -47,6 +47,31 @@
             font-size: 2rem;
             color: #000;
             font-weight: 700;
+            margin: 0;
+            margin-bottom: 4px;
+        }
+
+        @keyframes typing {
+          0% {
+            left: 0;
+          }
+
+          100% {
+            left: 100%;
+            opacity: 0;
+          }
+        }
+
+        @keyframes moveUp {
+          0% {
+            top: 50px;
+            opacity: 0;
+          }
+
+          100% {
+            top: 0;
+            opacity: 100;
+          }
         }
 
         h3 {
@@ -54,6 +79,21 @@
             letter-spacing: 2px;
             font-style: italic;
             opacity: .8;
+            margin: 0;
+            display: inline-block;
+            position: relative;
+            animation: moveUp .8s ease-out 1 forwards;
+        }
+
+        h3:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background: #fff;
+          animation: typing 4s cubic-bezier(0.52, -0.04, 0, 2.16) 1 forwards;
         }
 
         #profile {
