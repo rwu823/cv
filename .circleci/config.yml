@@ -157,6 +157,7 @@ jobs:
             yarn build
             echo "{ \"sha1\": \"$CIRCLE_SHA1\"}" > out/info.json
       - push_branch:
+          force: true
           dir: out
           branch: gh-pages
 
