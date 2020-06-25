@@ -9,3 +9,8 @@
 <p align="center">
   <a href="https://www.npmjs.org/package/rwu823">
 </p>
+
+
+```sh
+$ npx rwu823/cv
+```
