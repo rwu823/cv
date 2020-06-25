@@ -7,6 +7,9 @@
     "dev": "node dev",
     "build": "NODE_ENV=production rm -rf out && gulp build"
   },
+  "bin": {
+    "cv": "bin/xxx"
+  },
   "keywords": [],
   "author": "Rocky Wu",
   "license": "MIT",
