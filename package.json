@@ -3,10 +3,6 @@
   "version": "3.0.0",
   "description": "Rocky Wu's CV",
   "main": "index.js",
-  "scripts": {
-    "dev": "node dev",
-    "build": "NODE_ENV=production rm -rf out && gulp build"
-  },
   "bin": {
     "cv": "bin/cv"
   },
@@ -22,8 +18,7 @@
     "express": "4.17.1",
     "gulp": "4.0.2",
     "gulp-htmlclean": "2.7.22",
-    "gulp-size": "3.0.0",
-    "sh-exec": "2.1.0"
+    "gulp-size": "3.0.0"
   },
   "repository": "https://github.com/rwu823/cv.git",
   "husky": {
@@ -41,5 +36,9 @@
     "chalk": "4.1.0",
     "terminal-image": "1.0.1",
     "terminal-link": "2.1.1"
+  },
+  "scripts": {
+    "dev": "node dev",
+    "build": "NODE_ENV=production rm -rf out && gulp build"
   }
 }
