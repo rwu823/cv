@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production rm -rf out && gulp build"
   },
   "bin": {
-    "cv": "index.js"
+    "cv": "bin/cv"
   },
   "keywords": [],
   "author": "Rocky Wu",
