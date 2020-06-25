@@ -155,7 +155,7 @@ jobs:
           name: build
           command: |
             yarn build
-            echo "{ \"sha1\": \"$CIRCLE_SHA1\"}" > out/info.json
+            echo "{ \"sha1\": \"$CIRCLE_SHA1\"}" > out/info
       - push_branch:
           force: true
           dir: out
