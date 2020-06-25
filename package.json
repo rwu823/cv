@@ -15,12 +15,28 @@
   },
   "homepage": "https://github.com/rwu823/cv#readme",
   "devDependencies": {
-    "chalk": "^2.1.0",
-    "express": "^4.16.1",
-    "gulp": "^3.9.1",
-    "gulp-htmlclean": "^2.7.15",
-    "gulp-size": "^2.1.0",
-    "shelljs": "^0.7.8"
+    "@ts-mono/base": "rwu823/ts-mono#pkg/ts-base",
+    "express": "4.17.1",
+    "gulp": "4.0.2",
+    "gulp-htmlclean": "2.7.22",
+    "gulp-size": "3.0.0",
+    "shelljs": "0.8.4"
   },
-  "repository": "https://github.com/rwu823/cv.git"
+  "repository": "https://github.com/rwu823/cv.git",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "cfonts": "2.8.5",
+    "chalk": "4.1.0",
+    "terminal-image": "1.0.1",
+    "terminal-link": "2.1.1"
+  }
 }

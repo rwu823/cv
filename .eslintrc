@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@ts-mono"
+  ],
+  "rules": {
+    "@typescript-eslint/no-var-requires": 0
+  }
+}
