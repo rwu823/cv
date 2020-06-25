@@ -27,7 +27,7 @@ const CFonts = require('cfonts')
   console.log(`
 ${c.cyan.dim('Coding, Software & Live with JavaScript')}
 
-Hello I am Rocky, thank you for taking the time to read my experience, you can get more about me through the links below:
+Hello I am Rocky, thank you for taking the time to read my experience. And you can get more about me through the links below:
 
 📝 ${link(
     'Resume',
