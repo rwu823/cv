@@ -1,11 +1,11 @@
-<h1 align="center">Rocky's Resume</h1>
+<h1 align="center">Rocky's CV</h1>
+
+<h1 align="center">
+  <a href="https://circleci.com/gh/cv/rwu823" alt="Build Status">
+    <img src="https://img.shields.io/circleci/build/github/cv/rwu823/master?style=for-the-badge&logo=circleci" />
+  </a>
+</h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/rwu823/cv" target="_blank">
-    <img src="https://img.shields.io/travis/rwu823/cv.svg?style=flat-square" />
-  </a>
-
-  <a href="https://github.com/rwu823/cv/releases">
-    <img src="https://img.shields.io/github/tag/rwu823/cv.svg?style=flat-square" />
-  </a>
+  <a href="https://www.npmjs.org/package/rwu823">
 </p>
