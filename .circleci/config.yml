@@ -151,8 +151,13 @@ jobs:
     executor: node
     steps:
       - init
-      - run: yarn build
+      - run:
+          name: build
+          command: |
+            yarn build
+            echo "{ \"sha1\": \"$CIRCLE_SHA1\"}" > out/info.json
       - push_branch:
+          dir: out
           branch: gh-pages
 
 
