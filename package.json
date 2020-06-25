@@ -23,7 +23,7 @@
     "gulp": "4.0.2",
     "gulp-htmlclean": "2.7.22",
     "gulp-size": "3.0.0",
-    "shelljs": "0.8.4"
+    "sh-exec": "2.1.0"
   },
   "repository": "https://github.com/rwu823/cv.git",
   "husky": {

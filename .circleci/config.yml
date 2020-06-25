@@ -147,18 +147,14 @@ commands:
               source $BASH_ENV
 
 jobs:
-  e2e:
-    executor: node-browsers
-    steps:
-      - init
-      - run: yarn workspace @ts-mono/dev-pptr e2e
-
-  test:
+  build:
     executor: node
     steps:
       - init
-      - run: yarn test:ci
-      - run: bash <(curl -s https://codecov.io/bash)
+      - run: yarn build
+      - push_branch:
+          branch: gh-pages
+
 
   lint:
     executor: node
@@ -173,11 +169,9 @@ workflows:
 
   Base:
     jobs:
-      - e2e:
-          <<: *branch_testing
-      - test:
-          <<: *branch_testing
       - lint:
-          <<: *branch_testing
-      - mono-deploy:
+          <<: *branch_master
+      - build:
+          requires:
+            - lint
           <<: *branch_master
