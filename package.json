@@ -1,11 +1,14 @@
 {
-  "name": "resume",
+  "name": "@rwu823/cv",
   "version": "3.0.0",
-  "description": "Rocky Wu's Resume",
+  "description": "Rocky Wu's CV",
   "main": "index.js",
   "scripts": {
     "dev": "node dev",
     "build": "NODE_ENV=production rm -rf out && gulp build"
+  },
+  "bin": {
+    "cv": "index.js"
   },
   "keywords": [],
   "author": "Rocky Wu",
