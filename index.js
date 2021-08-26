@@ -31,7 +31,7 @@ Hello I am Rocky, thank you for taking the time to read my experience. And you c
 
 📝 ${link(
     'Resume',
-    'https://docs.google.com/document/d/1cJcYWFbRaV_cOvcUQl900i3sSLg2AjaBuGj9N219oXI/edit?usp=sharing',
+    'https://docs.google.com/document/d/1OAtOV6sir9yyclBy9hfb3oG4pXDQ5t8sXsuBtqkddSQ',
   )}
 ⭐ ${link('Github', 'https://github.com/rwu823')}
 📖 ${link('Linkedin', 'https://www.linkedin.com/in/rocky-wu')}
