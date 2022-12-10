@@ -15,7 +15,7 @@
   "homepage": "https://github.com/rwu823/cv#readme",
   "devDependencies": {
     "@ts-mono/base": "rwu823/ts-mono#pkg/ts-base",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "gulp": "4.0.2",
     "gulp-htmlclean": "2.7.22",
     "gulp-size": "3.0.0"
