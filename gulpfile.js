@@ -1,18 +1,16 @@
-const gu = require('gulp')
-const htmlclean = require('gulp-htmlclean')
-const size = require('gulp-size')
+import { task, src, dest } from 'gulp'
+import htmlclean from 'gulp-htmlclean'
+import size from 'gulp-size'
 
-gu.task('build', () =>
-  gu
-    .src('src/**')
-    .pipe(gu.dest('out'))
+task('build', () =>
+  src('src/**')
+    .pipe(dest('out'))
     .on('end', () =>
-      gu
-        .src('out/index.html')
+      src('out/index.html')
         .pipe(htmlclean())
-        .pipe(gu.dest('out'))
+        .pipe(dest('out'))
         .on('end', () =>
-          gu.src('src/**').pipe(
+          src('src/**').pipe(
             size({
               gzip: true,
               showFiles: true,
