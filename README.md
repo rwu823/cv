@@ -9,5 +9,5 @@
 
 ## Reach Me
 ```sh
-$ npx rwu823/cv
+npx rwu823/cv
 ```

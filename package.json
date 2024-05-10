@@ -1,10 +1,14 @@
 {
   "name": "@rwu823/cv",
-  "version": "3.0.0",
+  "type": "module",
+  "version": "24.5.11",
   "description": "Rocky Wu's CV",
   "main": "index.js",
   "bin": {
     "cv": "bin/cv"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [],
   "author": "Rocky Wu",
@@ -14,31 +18,26 @@
   },
   "homepage": "https://github.com/rwu823/cv#readme",
   "devDependencies": {
-    "@ts-mono/base": "rwu823/ts-mono#pkg/ts-base",
-    "express": "4.17.1",
-    "gulp": "4.0.2",
+    "@types/node": "20.12.11",
+    "gulp": "5.0.0",
     "gulp-htmlclean": "2.7.22",
-    "gulp-size": "3.0.0"
+    "gulp-size": "5.0.0"
   },
   "repository": "https://github.com/rwu823/cv.git",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx,js}": [
       "eslint --fix"
     ]
   },
   "dependencies": {
-    "cfonts": "2.8.5",
-    "chalk": "4.1.0",
-    "terminal-image": "1.0.1",
-    "terminal-link": "2.1.1"
+    "cfonts": "3.2.0",
+    "chalk": "5.3.0",
+    "terminal-link": "3.0.0"
   },
   "scripts": {
-    "dev": "node dev",
-    "build": "NODE_ENV=production rm -rf out && gulp build"
+    "dev": "bunx http-server src",
+    "prebuild": "rm -rf out",
+    "build": "NODE_ENV=production gulp build",
+    "publish": ""
   }
 }

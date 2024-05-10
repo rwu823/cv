@@ -1,3 +1,45 @@
 #!/usr/bin/env node
 
-require('..')
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import chalk from 'chalk';
+import link from 'terminal-link';
+
+import cfonts from 'cfonts'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+
+;(async () => {
+  cfonts.say('RockyWu', {
+    font: 'chrome',
+    align: 'left',
+    colors: ['green'],
+    background: 'transparent',
+    letterSpacing: 1,
+    lineHeight: 1,
+    space: true,
+    maxLength: '0',
+    gradient: false,
+    independentGradient: false,
+    transitionGradient: false,
+    env: 'node',
+  })
+
+  console.log(`
+${chalk.cyan('Coding, Software & Live with JavaScript')}
+
+Hello, My name is Rocky. I appreciate the time you've taken to consider my experiences. For a more comprehensive view of my skills and qualifications, I invite you to delve deeper through the accompanying links:
+
+📝 ${link(
+    'Resume',
+    'https://docs.google.com/document/d/1OAtOV6sir9yyclBy9hfb3oG4pXDQ5t8sXsuBtqkddSQ',
+  )}
+⭐ ${link('GitHub', 'https://github.com/rwu823')}
+✨ ${link('NPM', 'https://www.npmjs.com/~rwu823')}
+✨ ${link('VSCode Extensions', 'https://marketplace.visualstudio.com/publishers/rwu823')}
+✨ ${link('Sliders', 'https://drive.google.com/drive/u/2/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ')}
+  `)
+})()
