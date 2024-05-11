@@ -1,7 +1,7 @@
 {
   "name": "@rwu823/cv",
   "type": "module",
-  "version": "24.5.11",
+  "version": "24.5.11.1",
   "description": "Rocky Wu's CV",
   "main": "index.js",
   "bin": {
