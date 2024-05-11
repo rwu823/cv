@@ -40,6 +40,6 @@ Hello, My name is Rocky. I appreciate the time you've taken to consider my exper
 ⭐ ${link('GitHub', 'https://github.com/rwu823')}
 📦 ${link('NPM', 'https://www.npmjs.com/~rwu823')}
 ✨ ${link('VSCode Extensions', 'https://marketplace.visualstudio.com/publishers/rwu823')}
-🚀 ${link('Sliders', 'https://drive.google.com/drive/u/2/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ')}
+🚀 ${link('Sliders', 'https://drive.google.com/drive/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ?resourcekey=0-o2dWuOztuabxmXr7VtZrUg')}
   `)
 })()
