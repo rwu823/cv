@@ -18,10 +18,7 @@
   },
   "homepage": "https://github.com/rwu823/cv#readme",
   "devDependencies": {
-    "@types/node": "20.12.11",
-    "gulp": "5.0.0",
-    "gulp-htmlclean": "2.7.22",
-    "gulp-size": "5.0.0"
+    "@types/node": "20.12.11"
   },
   "repository": "https://github.com/rwu823/cv.git",
   "lint-staged": {
@@ -35,9 +32,6 @@
     "terminal-link": "3.0.0"
   },
   "scripts": {
-    "dev": "bunx http-server src",
-    "prebuild": "rm -rf out",
-    "build": "NODE_ENV=production gulp build",
-    "publish": ""
+    "dev": "bunx http-server src"
   }
 }
