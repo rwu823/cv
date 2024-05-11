@@ -12,8 +12,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 
-;(async () => {
-  cfonts.say('RockyWu', {
+; (async () => {
+  cfonts.say('Rocky Wu', {
     font: 'chrome',
     align: 'left',
     colors: ['green'],
@@ -38,8 +38,8 @@ Hello, My name is Rocky. I appreciate the time you've taken to consider my exper
     'https://docs.google.com/document/d/1OAtOV6sir9yyclBy9hfb3oG4pXDQ5t8sXsuBtqkddSQ',
   )}
 ⭐ ${link('GitHub', 'https://github.com/rwu823')}
-✨ ${link('NPM', 'https://www.npmjs.com/~rwu823')}
+📦 ${link('NPM', 'https://www.npmjs.com/~rwu823')}
 ✨ ${link('VSCode Extensions', 'https://marketplace.visualstudio.com/publishers/rwu823')}
-✨ ${link('Sliders', 'https://drive.google.com/drive/u/2/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ')}
+🚀 ${link('Sliders', 'https://drive.google.com/drive/u/2/folders/0ByZcdLkUkv8sZUh1R0M2QnJlUDQ')}
   `)
 })()
